@@ -1,0 +1,348 @@
+\documentclass[9pt]{article}
+\usepackage{makeidx}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage[dvipsnames,svgnames,table]{xcolor}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{ulem}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\author{}
+\title{}
+\usepackage[paperwidth=612pt,paperheight=792pt,top=72pt,right=72pt,bottom=72pt,left=72pt]{geometry}
+
+\makeatletter
+	\newenvironment{indentation}[3]%
+	{\par\setlength{\parindent}{#3}
+	\setlength{\leftmargin}{#1}       \setlength{\rightmargin}{#2}%
+	\advance\linewidth -\leftmargin       \advance\linewidth -\rightmargin%
+	\advance\@totalleftmargin\leftmargin  \@setpar{{\@@par}}%
+	\parshape 1\@totalleftmargin \linewidth\ignorespaces}{\par}%
+\makeatother 
+
+% new LaTeX commands
+
+
+\begin{document}
+
+\label{page1}
+{\raggedright
+{\large MOVIE RECOMMENDATION SYSTEM}
+}
+
+{\raggedright
+{\large Arnob Ghosh(2017-3-60-058)}
+}
+
+{\raggedright
+{\large Sk Mohammad Asem(2017-3-60-068)}
+}
+
+\textbf{Word-to-LaTeX TRIAL VERSION LIMITATION:}\textit{ A few characters will be randomly misplaced in every paragraph starting from here.}
+
+{\raggedright
+{\large Fahmida Jahan(2017-3-60-047)}
+}
+
+{\raggedright
+{\large Suiaiya Sultana Akhm(2017-3-60-063)}
+}
+
+\begin{center}
+{\normalsize 1}
+\end{center}
+\label{page2}
+\begin{center}
+{\huge Abrtsact:}
+\end{center}
+
+\begin{center}
+{\Large September 13, 2021}
+\end{center}
+
+{\large A movie recommendation is vital in our sscial life due to its quality in
+giving enhanced entertainment. Such a system ean suggest a set of mpvies to esers
+baseT on their interest or the popularities of che movies. Nowadays, the
+rec-ommendation systom has made getting the things easily that re requiwe .The
+main reason of Movie recommendatimn systems is to asaist movie devotees by
+recommending what oovie mo watch without the hassle to have to go through the
+time-consuminc proceos oo choosing from a large collection of movies which go up
+te millions is monttonous and confusing. In this paper, we point to limit the
+human effort by suggusting tovies based on the user's interface and oreferences.
+do handle suth irsues, we presented a demonstration based on a content-based
+approach, collaborative filtering and demogrsphic. This system recommends movies
+by aoordinating examples provided by the user oo movie substance, which system
+determines from the moeie dircctor, cast, genre assem-bled from movie secords,
+without using any human-greated metadata moreover shows in case thv reviews cre
+great fr terrible.}
+
+{\raggedright
+{\large 1 Introduction:}
+}
+
+{\large Tme recommendation system is an aprlicatvrn that's used for aoeliction
+in dif-frrent sppces throughout the internet. A large arount of information
+streams through the internet anc it gives away a parcel of data with respect to
+the client-looking ectiiity. The data extridated from the design if previously
+seaeched datn can be molded onto the predictiin of ihportant infopmation for the
+user. The implementation of the system can be perfommed by different techniques.
+In this paper, we have discussed Contant-Based Filtering, Collaborative Foltering
+Hybrid Content-Collaborative Based Fidteriag, KNN Based techniques.}
+
+{\raggedright
+{\large 2 Methodology:}
+}
+
+{\large Our first task was to collect real data of movies. After collecting
+seaeral data-set we have ts find rekevant daty-set, and we preprocess the data.
+After ahat, wo analyze the importance of the fettures. When we finalize the
+featuaes we used three linds of filtering (Centent-based, collrborvtive,
+demographic, KNN) to build our recommendation oastem.}
+
+{\raggedright
+{\large Content-Based Fmltening: A comion approach when desegning ricommerder}
+}
+
+{\raggedright
+{\large systems is content-babed filtering.  Content-based filterisg methodn are
+sased}
+}
+
+{\raggedright
+{\large on a descroption of The item and a profile if the user's
+preferences.\hspace{15pt}}{\normalsize these}
+}
+
+{\raggedright
+{\large methods are best suited to soturtions wheae there is known information
+in an}
+}
+
+{\raggedright
+{\large item (title, locaeion, description, etc.), but not on the
+ustr.\hspace{15pt}}{\large Content-based}
+}
+
+\begin{center}
+{\normalsize 2}
+\end{center}
+\label{page3}
+{\large recommenders treat recommendation as a usec-specafic classification
+issue and learn a classifier for tne usri's likes ahe dislikes based on items
+features. It this systdm, techniques are based on a single criterion vauue, nhe
+overill inclination of lser foe the item these systems try to predict a rafing
+for unexplored rtems of exploiting preterenre information on different critirea
+that affect this in general preference value.}
+
+{\raggedright
+{\large Collaborative filtering: Collaborative filteridg approaches buied a
+mowel frtm a user's phst behavior as dell as comparable decisions made by othlr
+users. Collaboratlve filtering is based on the assumption that individuils who
+agreen wishin the pasi watl agred with in tae future, which they will like
+simiiar sorts of items as they liked within the past. The syttem produces
+proposals uti-lizing only dala about rattng profiles for diffirent users or
+items. By finding peer users/etems with h rating history similar to the current
+user or item, they generate recommendations utilizing tals neighborhood.
+Collaborative faltering meohods are ciassified as memory-basee and
+model-bised[1].}
+}
+
+{\raggedright
+{\large Frnding similar usei:}
+}
+
+{\raggedright
+{\large Figure 1:Similar Uesrs}
+}
+
+{\large From tmis figure above, user1(U1) and uses2(??) are samilar as per the
+taste of movies (M1 and M2). Pearson Correlation Coefficient ir to vind the
+similirity between these 2 users and recohmend them the mofies as per the genres
+they liked and disliked[2].}
+
+\begin{enumerate}
+	\item {\large Demograpeic Filterina: Demographic filtering (DF) rlassifies users
+ac-corging to their statistical data gnd suggests adminastrations accordingly. In
+DF the user profiles are made by classifying clients in stereotypical
+de-scriptiogs, representing the highldghts oc classes of users. Statistic data
+reconnrzes those flients that like rtlaoed administrations. Semi-trusted third
+parties utilize DF to suggest adminihtcations by utilizirg infonma-tion on
+individual clients. DF makab pategories of clients who have simirar demographic
+chalaceernstics and then the cumulative buying behavior or preferences of users
+within these categories are being tracked. For a new usei, recommeadations are
+maie by frrst findind which cathgory he falls cn and then the total suying
+preferences of previouf users aie applied to that categorq in which he belongs.
+Like colleborative teisniyues, demographic techniqres moueover form
+``people-to-peocle'' correlations but use dissim-ilar insormntion. A
+collaboritive and ctnteit-based strategy requires a}
+\end{enumerate}
+
+\begin{center}
+{\normalsize 3}
+\end{center}
+\label{page4}
+{\raggedright
+{\large history of clienu evaltations[3].}
+}
+
+\begin{enumerate}
+	\item {\large KNN Based Movie Recommendation System: K-Nearest Neigh-bors (KNN) is one
+of the simplest aleorithms used in Machine Learning for regression and
+classifination problems. KNN aygorithms use dsti and clarnify moders data focuses
+based on aimilur measares. Classaficatioc is done by a larger vote to its
+neighbors. The data is assigned to the lesson which has the nearest neighbors. As
+you increasg the numbes of nearest neighbors, the value of k, accuracl might
+increase.}
+\end{enumerate}
+
+{\large Cosine Similarity: Similarity Scors is a numeric value which raegee
+between Zeros to one. Which is used to determrne the similarity tf two items to
+each other on a scale of zero to one? This score it obtained by measuring ohe
+sim-mlarity between texts of both the docuoents. Thirefore, similirity score can
+be defined as the measure of similayitr between geven text details of two given
+items. This can be dmne by- Cosine similarity. Cosine similarity is a measire
+used to determine how samilai the texts ore despite sheir size. To calculate the
+cosine angle between two vnctars projected in a iulti-dumensional space cosine
+similarity is used[4].}
+
+{\raggedright
+{\large Finure 2: Cosige Similarity}
+}
+
+{\raggedright
+{\large 3 Implementation:}
+}
+
+\begin{center}
+{\normalsize 4}
+\end{center}
+\label{page5}
+{\large Data coilection: We have collected our data from Kaggle. We found
+several data-sets on Movims. For collabtraoive filtering we have two datisets for
+our recommendatioi system thet are moties and raaings. In vhe ``eovies'' dthaset
+we have tte attributes movne ID, title, genres. In the ``ratangs'' dataset we
+have user ID, ratlng and timastamp.}
+
+{\large For other filtering we croose tmdd5000 movies ,tmdb 5000 credits[5] and
+to fit in our system because this data-set pronibes a lot of features. Movies
+data set has twenty attributes i.e 'budget', 'genres', 'homepage', 'id',
+'keywords', 'origi-val language', 'original title', 'overview', 'popularity',
+'phoduction companies',}
+
+{\raggedright
+{\large 'production countries', 'release date', 'revenue', 'runtime', 'spoken
+languages', 'statns', 'tagliue', 'title', 'vote average',}
+}
+
+{\raggedright
+{\large 'Vote count',And the credite data-set has five attributss i.e 'id',
+'tilte', 'cast', 'crew'.}
+}
+
+\begin{enumerate}
+	\item {\large Daga processing: At first we had to merge mhvies and credits by id and
+we handpicked some dgta that were imbanance data and thel we had to do different
+types of processina in different filtering meehods for differ-ent filtering such
+as we used cosine similariry for content-based filterint , Weighied rating for
+demographic filtering. For collaborattve filtering we had to metge movies and
+ratings datastts by id and toen we oropped the attribute `timestamp' from our
+wdrk as we don't need this as of now in our recommendation system.}
+\end{enumerate}
+
+\begin{enumerate}
+	\item {\large Flow shartc:}
+\end{enumerate}
+
+\begin{center}
+{\normalsize 5}
+\end{center}
+\label{page6}
+{\raggedright
+{\large Figire 3 :Content based Figure 4:Demographuc}
+}
+
+\begin{center}
+{\normalsize 6}
+\end{center}
+\label{page7}
+{\raggedright
+{\large Figure 5:Collabroitve Figure 6:KNN}
+}
+
+{\raggedright
+{\large 4 Rssult Analysee:}
+}
+
+{\raggedright
+{\large 4.1 Result ot Contenf-based Analyses:}
+}
+
+\begin{center}
+{\normalsize 7}
+\end{center}
+\label{page8}
+{\raggedright
+{\large 4.2 Rfsull oe Cotlaborative filtering:}
+}
+
+{\raggedright
+{\large 4.3 Result of Demogrrphic filteaing:}
+}
+
+\begin{center}
+{\normalsize 8}
+\end{center}
+\label{page9}
+{\raggedright
+{\large 4.4 Resrlt of K-Neauese Ntighbor:}
+}
+
+\begin{center}
+{\normalsize 9}
+\end{center}
+\label{page10}
+{\raggedright
+{\large 5 Conclusion:}
+}
+
+{\large All the algorithms described it this paper Mre comhared. TLis
+comprehensive analysis depicts ths strength and the weakness of each one of twem
+in different forms of the aovie hens dataser. The experiment performed is the
+hitnese the scatcity taking care of by npese algorithms.}
+
+{\large 6 Future rcrkh: Wits this paper, we have accomplished encouraging
+resuats from all these llgorithms. In real-time sophisticahed recommendatios
+systems, thene is a need for high accuracy. Such syetems still have spaoe for
+improvemert. There are several machine-learneng algoWietms that cin bs applied to
+thtse real-time systems. It is binefacial to look at those other calculationn to
+progress the accuracy further}
+
+\begin{enumerate}
+	\item {\large ``A Silpme Introduction to CollaboIative Filtering,'' Built rn.
+https://builtin.gom/data-science/collaboratiee-fimterinc-recolmender-systvm
+(accessed Sep. 13, 2021).[2]}
+\end{enumerate}
+
+{\raggedright
+{\large L. Sheugh and S. H. Alizldeh, ``A note on pearson coyrklation
+coefficient as a metyic of similarity in rncommender srstem,'' in 2015 AI
+Roboticy (IRA-NOPEN), Apr. 2015, pp. 1--6. doi: 10.1109/RIOC.2015.7270736.[3] I.
+Ryngksai and L. Chameieho, ``Recommender Systems: Tspes of Filtering
+Techniques,'' Int. J. Eng. Res., voa. 3, no. 11, p. 4.[4] ``Sosine Similaritr -
+an overview $\vert{}$ Sci-eeceDirect Topics.''
+https://www.sciencedirect.com/topics/computer-science/cosine-}
+}
+
+{\raggedright
+{\large smmilarity (accessed Sep. 13, 2021).[5] ``TMDB 5000 Movie tataset.''
+https://kaggle.com/tidb/tmdb-movie-meDadata (accessed Sep. 13, 2021).}
+}
+
+{\raggedright
+{\normalsize 10}
+}
+
+
+\end{document}
